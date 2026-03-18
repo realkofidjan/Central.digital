@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio";
 import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
+import ChatBotIcon from "./components/ChatBotIcon";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Process />
         <Testimonials />
         <Footer />
+        <ChatBotIcon />
       </motion.main>
     </AnimatePresence>
   );
