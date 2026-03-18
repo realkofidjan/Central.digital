@@ -1,9 +1,22 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { motion } from "motion/react";
-import { Send, ArrowRight, Asterisk } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { Send, ArrowRight, Asterisk, ChevronDown } from "lucide-react";
+import { useState } from "react";
+
+const services = [
+  "Web Development",
+  "Mobile Apps",
+  "UI/UX Design",
+  "Branding",
+  "Photography & Video",
+  "SaaS Product"
+];
 
 export default function StartProject() {
+  const [selectedService, setSelectedService] = useState(services[0]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -64,14 +77,41 @@ export default function StartProject() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 relative">
                   <label className="text-sm font-bold uppercase tracking-widest text-white/30 ml-2">Service</label>
-                  <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-lg focus:outline-none focus:border-accent/50 transition-colors appearance-none">
-                    <option className="bg-bg">Web Development</option>
-                    <option className="bg-bg">Mobile Apps</option>
-                    <option className="bg-bg">UI/UX Design</option>
-                    <option className="bg-bg">Branding</option>
-                  </select>
+                  <div 
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-lg cursor-pointer flex items-center justify-between hover:border-accent/50 transition-colors"
+                  >
+                    <span className={selectedService ? "text-white" : "text-white/30"}>
+                      {selectedService || "Select a service"}
+                    </span>
+                    <ChevronDown className={`w-5 h-5 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                  </div>
+
+                  <AnimatePresence>
+                    {isDropdownOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        className="absolute z-50 top-full left-0 w-full mt-2 bg-bg border border-white/10 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-xl"
+                      >
+                        {services.map((service) => (
+                          <div
+                            key={service}
+                            onClick={() => {
+                              setSelectedService(service);
+                              setIsDropdownOpen(false);
+                            }}
+                            className="px-6 py-4 hover:bg-white/5 cursor-pointer transition-colors text-lg border-b border-white/5 last:border-0"
+                          >
+                            {service}
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
 
                 <div className="space-y-2">

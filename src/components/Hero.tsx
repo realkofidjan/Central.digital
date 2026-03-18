@@ -3,6 +3,24 @@ import { ArrowRight, Play, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
+  const getAcceptingStatus = () => {
+    const now = new Date();
+    const month = now.getMonth(); // 0-11
+    const day = now.getDate();
+    const year = now.getFullYear();
+
+    // Closed from Dec 15 to Jan 15
+    const isClosed = (month === 11 && day >= 15) || (month === 0 && day < 15);
+
+    if (isClosed) {
+      return "Bookings closed — Reopening Jan 15";
+    }
+
+    // Calculate current quarter
+    const quarter = Math.floor(month / 3) + 1;
+    return `Now accepting projects for Q${quarter} ${year}`;
+  };
+
   const titleLines = [
     "WE BUILD",
     "DIGITAL",
@@ -50,7 +68,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
           <span className="text-xs font-bold uppercase tracking-widest text-white/60">
-            Now accepting projects for Q2 2026
+            {getAcceptingStatus()}
           </span>
         </motion.div>
 
