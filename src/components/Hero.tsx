@@ -1,0 +1,116 @@
+import { motion } from "motion/react";
+import { ArrowRight, Play } from "lucide-react";
+
+export default function Hero() {
+  const titleLines = [
+    "WE BUILD",
+    "DIGITAL",
+    "POWERHOUSES."
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const lineVariants = {
+    hidden: { opacity: 0, y: 100, rotateX: -45 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      transition: {
+        duration: 1,
+        ease: [0.215, 0.61, 0.355, 1],
+      },
+    },
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+      {/* Background Gradients */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
+        >
+          <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+          <span className="text-xs font-bold uppercase tracking-widest text-white/60">
+            Now accepting projects for Q2 2026
+          </span>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="perspective-1000"
+        >
+          {titleLines.map((line, i) => (
+            <motion.h1
+              key={i}
+              variants={lineVariants}
+              className={`text-6xl md:text-8xl lg:text-9xl font-display font-bold leading-[0.9] tracking-tighter uppercase ${
+                i === 1 ? "italic font-light text-white/20" : "text-gradient"
+              }`}
+            >
+              {line}
+            </motion.h1>
+          ))}
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="max-w-2xl mx-auto text-lg md:text-xl text-white/50 mt-12 mb-12"
+        >
+          Central is a boutique digital agency based in Ghana, crafting high-performance websites, 
+          SaaS products, and mobile experiences for the next generation of tech leaders.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+        >
+          <button className="bg-white text-bg px-8 py-4 rounded-2xl text-lg font-bold hover:bg-accent transition-colors flex items-center gap-2 group">
+            View Case Studies
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+          <button className="flex items-center gap-3 text-lg font-medium hover:text-accent transition-colors group">
+            <div className="w-12 h-12 rounded-full glass flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Play className="w-5 h-5 fill-current" />
+            </div>
+            Watch Showreel
+          </button>
+        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Scroll to explore</span>
+        <div className="w-px h-12 bg-gradient-to-b from-accent/50 to-transparent" />
+      </motion.div>
+    </section>
+  );
+}
