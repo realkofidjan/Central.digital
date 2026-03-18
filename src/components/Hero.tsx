@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   const titleLines = [
@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-6 text-center pb-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -86,7 +86,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12"
         >
           <button className="bg-white text-bg px-8 py-4 rounded-2xl text-lg font-bold hover:bg-accent transition-colors flex items-center gap-2 group">
             View Case Studies
@@ -103,13 +103,23 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ 
+          delay: 2, 
+          duration: 1,
+          y: {
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }
+        }}
+        className="absolute bottom-12 right-12 hidden md:flex flex-col items-center"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Scroll to explore</span>
-        <div className="w-px h-12 bg-gradient-to-b from-accent/50 to-transparent" />
+        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center glass">
+          <ChevronDown className="w-6 h-6 text-accent" />
+        </div>
       </motion.div>
     </section>
   );
