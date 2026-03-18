@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Play, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const titleLines = [
@@ -88,10 +89,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12"
         >
-          <button className="bg-white text-bg px-8 py-4 rounded-2xl text-lg font-bold hover:bg-accent transition-colors flex items-center gap-2 group">
-            View Case Studies
+          <Link to="/start-project" className="bg-white text-bg px-8 py-4 rounded-2xl text-lg font-bold hover:bg-accent transition-colors flex items-center gap-2 group">
+            Get in Touch
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
           <button className="flex items-center gap-3 text-lg font-medium hover:text-accent transition-colors group">
             <div className="w-12 h-12 rounded-full glass flex items-center justify-center group-hover:scale-110 transition-transform">
               <Play className="w-5 h-5 fill-current" />
