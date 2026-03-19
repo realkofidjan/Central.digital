@@ -10,38 +10,38 @@ import {
 
 const services = [
   {
-    title: "Graphic Design",
-    description: "Visual identities that resonate. From logo systems to full brand guidelines, we create the visual language of your brand.",
+    title: "Brand Strategy",
+    description: "Visual identities that resonate globally while staying rooted in Ghanaian heritage. From logo systems to full brand guidelines.",
     icon: Palette,
     accent: "bg-blue-500/20 text-blue-400",
   },
   {
-    title: "Photography & Videography",
-    description: "Cinematic storytelling that captures the essence of your product. High-end production for social, web, and TV.",
+    title: "Digital Production",
+    description: "Cinematic storytelling that captures the essence of West African innovation. High-end production for social, web, and TV.",
     icon: Camera,
     accent: "bg-red-500/20 text-red-400",
   },
   {
-    title: "Website Development",
-    description: "High-performance, SEO-optimized websites built with modern stacks like React, Next.js, and Tailwind CSS.",
+    title: "Web Engineering",
+    description: "High-performance, SEO-optimized websites built for both local connectivity and global speed using modern tech stacks.",
     icon: Globe,
     accent: "bg-green-500/20 text-green-400",
   },
   {
-    title: "UI/UX Design",
-    description: "User-centric interfaces that convert. We focus on accessibility, usability, and aesthetic excellence.",
+    title: "Experience Design",
+    description: "User-centric interfaces that convert. We focus on accessibility, usability, and aesthetic excellence for diverse markets.",
     icon: Layout,
     accent: "bg-purple-500/20 text-purple-400",
   },
   {
-    title: "Mobile App Development",
-    description: "Native and cross-platform mobile apps that provide seamless experiences on iOS and Android.",
+    title: "Fintech & Mobile",
+    description: "Native and cross-platform mobile apps optimized for the West African digital economy and mobile money ecosystems.",
     icon: Smartphone,
     accent: "bg-orange-500/20 text-orange-400",
   },
   {
-    title: "SaaS Product Development",
-    description: "End-to-end product strategy and development for scalable SaaS platforms. From MVP to enterprise scale.",
+    title: "SaaS & Enterprise",
+    description: "End-to-end product strategy and development for scalable platforms. From Accra to the world, we build for scale.",
     icon: Layers,
     accent: "bg-indigo-500/20 text-indigo-400",
   },
@@ -89,7 +89,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-display font-bold"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold"
             >
               WE SOLVE <span className="italic font-light">COMPLEX</span> <br />
               DIGITAL CHALLENGES.

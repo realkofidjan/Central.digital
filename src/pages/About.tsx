@@ -23,11 +23,11 @@ export default function About() {
             >
               <Asterisk className="text-bg w-10 h-10 stroke-[3]" />
             </motion.div>
-            <h1 className="font-display font-bold text-6xl md:text-8xl tracking-tighter uppercase mb-8">
+            <h1 className="font-display font-bold text-4xl sm:text-6xl md:text-8xl tracking-tighter uppercase mb-8">
               We are <span className="text-accent">Central</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/50 max-w-3xl leading-relaxed">
-              A collective of designers, engineers, and strategists dedicated to building high-performance digital products that define the next generation of tech.
+              Based in Accra, we are a collective of designers, engineers, and strategists dedicated to building high-performance digital products that blend West African creativity with global technical standards.
             </p>
           </div>
 
@@ -35,18 +35,18 @@ export default function About() {
             {[
               {
                 icon: <Users className="w-8 h-8 text-accent" />,
-                title: "Our Team",
-                description: "Expert builders with a passion for clean code and exceptional design."
+                title: "Local Soul",
+                description: "We are deeply rooted in the Ghanaian tech ecosystem, drawing from the rich cultural tapestry of Accra."
               },
               {
                 icon: <Target className="w-8 h-8 text-accent" />,
-                title: "Our Mission",
-                description: "To empower businesses with digital solutions that are both beautiful and functional."
+                title: "Global Reach",
+                description: "Our solutions are built to international standards, serving clients from London to New York and beyond."
               },
               {
                 icon: <Rocket className="w-8 h-8 text-accent" />,
-                title: "Our Vision",
-                description: "Setting the standard for digital excellence across the African continent."
+                title: "Future Ready",
+                description: "We are at the forefront of the African digital renaissance, building the tools for tomorrow's leaders."
               }
             ].map((item, index) => (
               <div key={index} className="glass p-10 rounded-3xl border border-white/5">
@@ -58,7 +58,7 @@ export default function About() {
           </div>
 
           <div className="glass p-12 md:p-24 rounded-[3rem] border border-white/5 text-center">
-            <h2 className="font-display font-bold text-4xl md:text-6xl uppercase tracking-tighter mb-8">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-6xl uppercase tracking-tighter mb-8">
               Based in the heart of <span className="text-accent">Accra</span>
             </h2>
             <p className="text-xl text-white/50 max-w-2xl mx-auto mb-12">

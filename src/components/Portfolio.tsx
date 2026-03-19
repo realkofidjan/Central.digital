@@ -3,27 +3,27 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Velo Finance",
-    category: "SaaS Product",
-    image: "https://picsum.photos/seed/velo/1200/800",
-    accent: "bg-indigo-500",
+    title: "Kente Heritage",
+    category: "E-commerce Platform",
+    image: "https://picsum.photos/seed/kente/1200/800",
+    accent: "bg-yellow-500",
   },
   {
-    title: "Skyline Real Estate",
-    category: "Website Design",
-    image: "https://picsum.photos/seed/skyline/1200/800",
+    title: "Accra Living",
+    category: "Real Estate Portal",
+    image: "https://picsum.photos/seed/accra/1200/800",
     accent: "bg-emerald-500",
   },
   {
-    title: "EcoFlow App",
-    category: "Mobile App",
-    image: "https://picsum.photos/seed/ecoflow/1200/800",
+    title: "Oware Digital",
+    category: "Mobile Game",
+    image: "https://picsum.photos/seed/oware/1200/800",
     accent: "bg-orange-500",
   },
   {
-    title: "Lumina Studio",
-    category: "Branding",
-    image: "https://picsum.photos/seed/lumina/1200/800",
+    title: "Ghana Tech Summit",
+    category: "Event Experience",
+    image: "https://picsum.photos/seed/summit/1200/800",
     accent: "bg-purple-500",
   },
 ];
@@ -69,7 +69,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-display font-bold"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold"
             >
               CRAFTING <span className="italic font-light text-white/50">ICONIC</span> <br />
               DIGITAL EXPERIENCES.

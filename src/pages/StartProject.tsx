@@ -5,12 +5,12 @@ import { Send, ArrowRight, Asterisk, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const services = [
-  "Web Development",
-  "Mobile Apps",
-  "UI/UX Design",
-  "Branding",
-  "Photography & Video",
-  "SaaS Product"
+  "Web Engineering",
+  "Fintech & Mobile Money",
+  "Experience Design",
+  "Brand Strategy",
+  "Digital Production",
+  "SaaS & Enterprise"
 ];
 
 export default function StartProject() {
@@ -37,21 +37,25 @@ export default function StartProject() {
               >
                 <Asterisk className="text-bg w-10 h-10 stroke-[3]" />
               </motion.div>
-              <h1 className="font-display font-bold text-6xl md:text-8xl tracking-tighter uppercase mb-8">
+              <h1 className="font-display font-bold text-4xl sm:text-6xl md:text-8xl tracking-tighter uppercase mb-8">
                 Let's build <span className="text-accent">together</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/50 max-w-lg leading-relaxed mb-12">
-                Have a project in mind? We're ready to help you bring it to life. Tell us about your vision.
+                Whether you're a local startup or an international enterprise, we're ready to help you scale. Tell us about your vision.
               </p>
 
               <div className="space-y-8">
                 <div>
                   <h4 className="font-display font-bold text-lg mb-4 uppercase tracking-widest text-white/30">Email</h4>
-                  <a href="mailto:hello@central.digital" className="text-2xl font-medium hover:text-accent transition-colors">hello@central.digital</a>
+                  <a href="mailto:hello@central.digital" className="text-2xl font-medium hover:text-accent transition-colors underline underline-offset-8 decoration-white/10">hello@central.digital</a>
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-lg mb-4 uppercase tracking-widest text-white/30">Office</h4>
+                  <h4 className="font-display font-bold text-lg mb-4 uppercase tracking-widest text-white/30">Studio</h4>
                   <p className="text-2xl font-medium text-white/50">East Legon, Accra, Ghana</p>
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-lg mb-4 uppercase tracking-widest text-white/30">WhatsApp</h4>
+                  <a href="https://wa.me/233000000000" className="text-2xl font-medium hover:text-accent transition-colors">+233 (0) 00 000 0000</a>
                 </div>
               </div>
             </div>

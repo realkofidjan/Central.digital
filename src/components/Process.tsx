@@ -64,7 +64,7 @@ export default function Process() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-display font-bold"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold"
             >
               HOW WE <span className="italic font-light">DELIVER</span> <br />
               EXCELLENCE.

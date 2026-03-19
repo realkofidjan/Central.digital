@@ -22,9 +22,9 @@ export default function Hero() {
   };
 
   const titleLines = [
-    "WE BUILD",
+    "ACCRA'S",
     "DIGITAL",
-    "POWERHOUSES."
+    "REVOLUTION."
   ];
 
   const containerVariants = {
@@ -82,7 +82,7 @@ export default function Hero() {
             <motion.h1
               key={i}
               variants={lineVariants}
-              className={`text-6xl md:text-8xl lg:text-9xl font-display font-bold leading-[0.9] tracking-tighter uppercase ${
+              className={`text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-display font-bold leading-[0.9] tracking-tighter uppercase ${
                 i === 1 ? "italic font-light text-white/20" : "text-gradient"
               }`}
             >

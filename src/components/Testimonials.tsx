@@ -1,24 +1,25 @@
 import { motion } from "motion/react";
 import { Quote, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, Velo Finance",
-    quote: "Central transformed our digital presence. Their attention to detail and technical expertise is unmatched.",
-    image: "https://picsum.photos/seed/sarah/100/100",
+    name: "Kwame Mensah",
+    role: "Founder, Kente Heritage",
+    quote: "Central transformed our digital presence. Their ability to blend traditional Ghanaian aesthetics with modern tech is unmatched.",
+    image: "https://picsum.photos/seed/kwame/100/100",
   },
   {
-    name: "Michael Chen",
-    role: "CTO, Skyline Real Estate",
-    quote: "The team at Central is incredibly talented. They delivered a high-performance website that exceeded our expectations.",
-    image: "https://picsum.photos/seed/michael/100/100",
+    name: "Ama Serwaa",
+    role: "Director, Accra Living",
+    quote: "The team at Central is incredibly talented. They delivered a high-performance real estate portal that has scaled our operations.",
+    image: "https://picsum.photos/seed/ama/100/100",
   },
   {
-    name: "Emily Davis",
-    role: "Product Manager, EcoFlow App",
-    quote: "Working with Central was a game-changer for our product. Their design and development process is top-notch.",
-    image: "https://picsum.photos/seed/emily/100/100",
+    name: "Kofi Boateng",
+    role: "CTO, Oware Digital",
+    quote: "Working with Central was a game-changer for our mobile game. Their design and development process is world-class.",
+    image: "https://picsum.photos/seed/kofi/100/100",
   },
 ];
 
@@ -63,7 +64,7 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-display font-bold"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold"
             >
               WHAT OUR <span className="italic font-light">CLIENTS</span> <br />
               SAY ABOUT US.
@@ -120,15 +121,15 @@ export default function Testimonials() {
           className="mt-32 p-12 md:p-24 rounded-[40px] bg-accent text-bg flex flex-col items-center text-center relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-br from-white/10 to-transparent" />
-          <h2 className="text-5xl md:text-8xl font-display font-bold leading-none mb-12 tracking-tighter">
+          <h2 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-display font-bold leading-none mb-12 tracking-tighter">
             READY TO <br />
             START YOUR <br />
             NEXT PROJECT?
           </h2>
-          <button className="bg-bg text-white px-12 py-6 rounded-3xl text-xl font-bold hover:bg-white hover:text-bg transition-all flex items-center gap-3 group">
+          <Link to="/start-project" className="relative z-10 bg-bg text-white px-12 py-6 rounded-3xl text-xl font-bold hover:bg-white hover:text-bg transition-all flex items-center gap-3 group">
             Get in Touch
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>
