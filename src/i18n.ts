@@ -122,6 +122,66 @@ const resources = {
         location: "CONÇU_À_ACCRA // CONSTRUIT_POUR_LE_MONDE"
       }
     }
+  },
+  ak: {
+    translation: {
+      nav: {
+        services: "Nnwuma",
+        portfolio: "Nnwuma a Yɛayɛ",
+        about: "Yɛn Ho Asɛm",
+        process: "Yɛn Kwan",
+        pricing: "Boɔ",
+        initialize: "Hyɛ Ase",
+        initialize_project: "Hyɛ Adwuma Ase"
+      },
+      hero: {
+        status: "TEBEA: YƐREYƐ ADWUMA // Q1_2026",
+        title_1: "MFIDIE",
+        title_2: "DIGITAL",
+        title_3: "NHYEHYƐE.",
+        subtitle: "YƐYƐ NHYEHYƐE A ƐMA DIGITAL ADWUMAYƐ KƆ SO YIYE WƆ WIYASE NYINAA, EFIRI GHANA INNOVATION MU.",
+        cta: "HYƐ_ADWUMA_ASE"
+      },
+      services: {
+        matrix: "Nnwuma_Nhyehyɛe",
+        title_1: "MFIDIE",
+        title_2: "ANOADURU",
+        title_3: "MA NHYEHYƐE A ƐYƐ DEN.",
+        subtitle: "YƐDE AKWANKYERƐFOƆ NE MFIDIEFOƆ BOM YƐ ADWUMA A ƐMA DIGITAL NHYEHYƐE KƆ SO YIYE.",
+        brand: "Brand Nhyehyɛe",
+        production: "Digital Production",
+        web: "Web Mfidie",
+        experience: "Experience Design",
+        fintech: "Fintech & Mobile",
+        saas: "SaaS & Enterprise"
+      },
+      portfolio: {
+        label: "Nnwuma_a_Yɛapaw",
+        title: "NHYEHYƐE A ƐREYƐ ADWUMA.",
+        view: "HWƐ_ADWUMA"
+      },
+      process: {
+        label: "Adwumayɛ_Kwan",
+        title: "YƐN KWAN.",
+        phase_01: "Nhwehwɛmu",
+        phase_02: "Architecture",
+        phase_03: "Mfidie Adwuma",
+        phase_04: "Deployment"
+      },
+      pricing: {
+        label: "Sika_Nhyehyɛe",
+        title: "ADWUMAYƐ BOM.",
+        monthly: "/BOSOME",
+        initialize: "Hyɛ_Ase"
+      },
+      footer: {
+        newsletter: "SYSTEM_UPDATES",
+        subscribe: "KYERƐW_WO_DIN",
+        placeholder: "HYƐ_EMAIL_MU",
+        rights: "HOKWAN NYINAA YƐ YƐN DEA.",
+        location: "YƐYƐƐ WƆ ACCRA // MA WIYASE NYINAA"
+      }
+    }
   }
 };
 

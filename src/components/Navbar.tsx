@@ -31,8 +31,10 @@ export default function Navbar() {
   };
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "fr" : "en";
-    i18n.changeLanguage(newLang);
+    const langs = ["en", "fr", "ak"];
+    const currentIndex = langs.indexOf(i18n.language);
+    const nextIndex = (currentIndex + 1) % langs.length;
+    i18n.changeLanguage(langs[nextIndex]);
   };
 
   const navLinks = [
