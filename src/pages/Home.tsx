@@ -54,9 +54,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       
-      <SectionWrapper>
-        <Services />
-      </SectionWrapper>
+      <Services />
 
       <SectionWrapper>
         <Portfolio />

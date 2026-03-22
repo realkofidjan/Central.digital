@@ -26,7 +26,7 @@ export default function About() {
             <h1 className="font-display font-bold text-4xl sm:text-6xl md:text-8xl tracking-tighter uppercase mb-8">
               We are <span className="text-accent">Central</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/50 max-w-3xl leading-relaxed">
+            <p className="text-xl md:text-2xl text-ink/50 max-w-3xl leading-relaxed">
               Based in Accra, we are a collective of designers, engineers, and strategists dedicated to building high-performance digital products that blend West African creativity with global technical standards.
             </p>
           </div>
@@ -49,19 +49,19 @@ export default function About() {
                 description: "We are at the forefront of the African digital renaissance, building the tools for tomorrow's leaders."
               }
             ].map((item, index) => (
-              <div key={index} className="glass p-10 rounded-3xl border border-white/5">
+              <div key={index} className="glass p-10 rounded-3xl border border-ink/5">
                 <div className="mb-6">{item.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">{item.title}</h3>
-                <p className="text-lg text-white/50 leading-relaxed">{item.description}</p>
+                <p className="text-lg text-ink/50 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="glass p-12 md:p-24 rounded-[3rem] border border-white/5 text-center">
+          <div className="glass p-12 md:p-24 rounded-[3rem] border border-ink/5 text-center">
             <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-6xl uppercase tracking-tighter mb-8">
               Based in the heart of <span className="text-accent">Accra</span>
             </h2>
-            <p className="text-xl text-white/50 max-w-2xl mx-auto mb-12">
+            <p className="text-xl text-ink/50 max-w-2xl mx-auto mb-12">
               We draw inspiration from the vibrant energy of Ghana to create digital experiences that resonate globally.
             </p>
             <div className="aspect-video w-full rounded-3xl overflow-hidden grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700">

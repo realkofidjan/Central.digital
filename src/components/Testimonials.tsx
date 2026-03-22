@@ -47,89 +47,90 @@ const itemVariants = {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 border-t border-line bg-bg overflow-hidden">
-      <div className="max-w-[1800px] mx-auto">
-        <div className="px-6 mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-8">
+    <section id="testimonials" className="py-24 px-6 bg-bg">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+          <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="flex items-center gap-4 mb-8"
+              className="flex items-center gap-2 mb-4"
             >
               <div className="w-12 h-px bg-accent" />
-              <span className="mono-label text-accent opacity-100 font-bold">Client_Feedback</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-accent">Testimonials</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-none tracking-tighter"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold"
             >
-              TRUSTED BY <span className="italic-serif font-light opacity-30">INDUSTRY</span> <br />
-              LEADERS.
+              WHAT OUR <span className="italic font-light">CLIENTS</span> <br />
+              SAY ABOUT US.
             </motion.h2>
           </div>
-          <div className="lg:col-span-4 flex items-end">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-ink/50 text-xl leading-tight"
-            >
-              WE PRIDE OURSELVES ON DELIVERING EXCEPTIONAL VALUE AND BUILDING LONG-LASTING PARTNERSHIPS.
-            </motion.p>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-ink/50 max-w-sm text-lg"
+          >
+            A few words from the companies we've worked with.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-line">
-          {testimonials.map((testimonial, index) => (
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={`group p-12 border-b border-line ${index < 2 ? "lg:border-r" : ""} hover:bg-accent transition-colors duration-300`}
+              variants={itemVariants}
+              className="p-8 rounded-3xl glass border-ink/5"
             >
-              <div className="flex items-center gap-1 mb-8">
-                <Quote className="w-8 h-8 text-accent group-hover:text-bg transition-colors" />
-              </div>
-              
-              <p className="text-xl font-medium text-ink/80 group-hover:text-bg transition-colors mb-12 leading-relaxed italic-serif">
+              <Quote className="w-10 h-10 text-accent mb-8" />
+              <p className="text-xl font-medium mb-8 leading-relaxed">
                 "{testimonial.quote}"
               </p>
-
-              <div className="flex items-center gap-4 pt-8 border-t border-line group-hover:border-bg/20">
-                <div className="w-12 h-12 rounded-full overflow-hidden border border-line group-hover:border-bg">
-                  <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover grayscale" />
-                </div>
+              <div className="flex items-center gap-4">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  referrerPolicy="no-referrer"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
-                  <h4 className="font-bold uppercase group-hover:text-bg">{testimonial.name}</h4>
-                  <p className="text-xs mono-label group-hover:text-bg/50">{testimonial.role}</p>
+                  <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                  <p className="text-sm text-ink/50">{testimonial.role}</p>
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="p-24 bg-ink text-bg text-center relative overflow-hidden">
-          <div className="grid-bg opacity-10 absolute inset-0" />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative z-10"
-          >
-            <h2 className="text-5xl md:text-7xl lg:text-9xl font-display font-bold mb-12 tracking-tighter uppercase">
-              READY TO <span className="italic-serif font-light opacity-30">INITIALIZE</span>?
-            </h2>
-            <Link to="/start-project" className="inline-flex items-center gap-4 bg-accent text-bg px-12 py-6 text-xl font-bold uppercase tracking-widest hover:bg-bg hover:text-accent transition-all group">
-              Start Project
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
-        </div>
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32 p-12 md:p-24 rounded-[40px] bg-accent text-bg flex flex-col items-center text-center relative overflow-hidden"
+        >
+          <div className="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-br from-white/10 to-transparent" />
+          <h2 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-display font-bold leading-none mb-12 tracking-tighter">
+            READY TO <br />
+            START YOUR <br />
+            NEXT PROJECT?
+          </h2>
+          <Link to="/start-project" className="relative z-10 bg-bg text-ink px-12 py-6 rounded-3xl text-xl font-bold hover:bg-ink hover:text-white transition-all flex items-center gap-3 group">
+            Get in Touch
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
